@@ -1,0 +1,38 @@
+<!doctype html>
+{% load static %}
+{% load widget_tweaks %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style-account.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="teacher">
+        <nav>
+            <a href="{% url 'home' %}"><span id="mentop-com">MenTOP.com</span></a>
+            <div id="nav-text-div">
+                <a href="{% url 'mentor_profile' %}"><span>Account</span></a>
+                <a href="{% url 'my_subscribers' %}"><span>My subscribers</span></a>
+                <a href="{% url 'logout' %}"><span>Leave</span></a>
+                <a href=""><span>Money: 5$</span></a>
+            </div>
+        </nav>
+    </header>
+    <section id="add-post-form">
+        <div id="main-info">
+                  <form method="post" id="post-course">
+                    {% csrf_token %}
+                      {% render_field form.title placeholder="Subject" %}
+                      {% render_field form.language placeholder="Languages" %}
+                      {% render_field form.body placeholder="Description" %}
+                      {% render_field form.price placeholder="Price" %}
+                      {% render_field form.phone_number placeholder="Number" %}
+                    <button type="submit">Create</button>
+                  </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

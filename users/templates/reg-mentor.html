@@ -1,0 +1,31 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="diamond"></div>
+    <div id="circle"></div>
+    <header>
+            <div class="navbar">
+                <nav class="main-nav">
+                    <a href="home.html" class="tittle"><span class="tittle">MenTOP.com</span></a>
+                    <a href="home.html"><span>Home</span></a>
+                    <a href="about.html"><span>About</span></a>
+                    <a href="sing-in.html"><span id="main-link">Sing in</span></a>
+                    <a href="contact.html"><span>Contact</span></a>
+                </nav>
+            </div>
+    </header>
+    <center><form method="POST" class="sing-in-form">
+        {% csrf_token %}
+        <p>Registration</p>
+        {{ form }}
+        <button type="submit">Enter</button>
+    </form></center>
+</body>
+</html>

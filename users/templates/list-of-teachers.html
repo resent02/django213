@@ -1,0 +1,37 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style-account.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+         <nav>
+            <a href="{% url 'home' %}"><span id="mentop-com">MenTOP.com</span></a>
+            <div id="nav-text-div">
+                <a href="{% url 'student_profile' %}"><span>Account</span></a>
+                <a href="{% url 'teachers_list' %}"><span>Teachers</span></a>
+                <a href="{% url 'logout' %}"><span>Leave</span></a>
+                <a href=""><span>Money: 5$</span></a>
+            </div>
+        </nav>
+    </header>
+    </section>
+    <section id="early-subs">
+        {% for mentor in mentors %}
+            {% if mentor.is_mentor %}
+                <a href="{% url 'mentor_detail' mentor.id %}">
+                    <div class="card-profile">
+                        <img src="{% static 'img/avatars/bogdan.png' %}">
+                        <p>Name: {{ mentor.username }}</p>
+                        <p>Courses: {{ mentor.courses.all.count }}</p><br>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </section>
+</body>
+</html>

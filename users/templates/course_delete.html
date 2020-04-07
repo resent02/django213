@@ -1,0 +1,39 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style-account.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="teacher">
+        <nav>
+            <a href="{% url 'home' %}"><span id="mentop-com">MenTOP.com</span></a>
+            <div id="nav-text-div">
+                <a href="{% url 'mentor_profile' %}"><span>Account</span></a>
+                <a href="{% url 'my_subscribers' %}"><span>My subscribers</span></a>
+                <a href="{% url 'logout' %}"><span>Leave</span></a>
+                <a href=""><span>Money: 5$</span></a>
+            </div>
+        </nav>
+    </header>
+    <section id="main-info-section">
+        <div id="main-info">
+            <a href=""><img src="{% static 'img/avatars/bogdan.png' %}"></a>
+            <div id="back-nick"><p>{{ user }}</p></div>
+        </div>
+    </section>
+    <section id="confirm-delete">
+        <div id="delete-confirm">
+            <form method="post">
+                {% csrf_token %}
+                <p>You sure want delete "{{ course.title }}" course ?</p>
+                <button type="submit">Confirm Delete</button>
+              <a href="{% url 'mentor_profile' %}"><span>Back</span></a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

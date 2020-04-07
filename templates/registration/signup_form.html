@@ -1,0 +1,11 @@
+
+
+
+      <h2>Зарегистрироваться как  {{ user_type }}</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form}}
+        <button type="submit" class="btn btn-success">Регистрация</button>
+      </form>
+
+

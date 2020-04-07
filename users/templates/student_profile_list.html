@@ -1,0 +1,11 @@
+<h1>Страница студента</h1>
+<p>{{ user }}</p>
+<a href="{% url 'logout' %}">Выйти из аккаунта</a>
+
+<p><a href="{% url 'courses_list' %}">Смотреть все курсы</a></p>
+
+{% for course in courses %}
+
+    <p><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></p>
+
+{% endfor %}

@@ -1,0 +1,135 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="diamond"></div>
+    <div id="circle"></div>
+    <header>
+            <div class="navbar">
+                <nav class="main-nav">
+                    <a href="{% url 'home' %}" class="tittle"><span class="tittle">MenTOP.com</span></a>
+                    <a href="{% url 'home' %}"><span>Home</span></a>
+                    <a href="{% url 'about' %}"><span>About</span></a>
+                    <a href="{% url 'login' %}"><span>Sing in</span></a>
+                    <a href="{% url 'contact' %}"><span id="main-link">Contact</span></a>
+                </nav>
+            </div>
+    </header>
+    <article>
+            <span class="outside">
+                <span id="bogdan" onmouseover="bogdan()">
+                    Bogdan
+                </span>
+            </span>
+        <span class="description" id="bogdan-desc">
+            <hr noshade>
+            The project was a team leader and Frontend & Backend developer.
+            Knows
+            <span class="main-word">JavaScript</span>,
+            <span class="main-word">HTML</span>,
+            <span class="main-word">CSS</span>,
+            <span class="main-word">Python</span>,
+            etc.<hr noshade>
+            Contact Information:<br>
+            <span class="main-word">+996 559 533 388</span><br>
+            <span class="contact-info">
+                <span class="main-word">
+                    <a href="http://instagram.com/btdizp">INSTAGRAM</a>
+                </span> |
+                <span class="main-word">
+                    <a href="HTTP://vk.com/btdizp">VK</a>
+                </span> |
+                <span class="main-word">
+                    <a href="https://web.telegram.org/@BTDizP">TELEGRAM</a>
+                </span>
+            </span>
+        </span>
+        <span class="outside">
+            <span id="sergey" onmouseover="sergey()">
+                Sergey
+            </span>
+        </span>
+        <span class="description" id="sergey-desc">
+            <hr noshade>
+            Has created system of comments, auth and CRUD was a Backend developer.
+            Knows
+            <span class="main-word">HTML</span>,
+            <span class="main-word">CSS</span>,
+            <span class="main-word">Python</span>.
+            <hr noshade>
+            Contact Information:<br>
+            <span class="main-word">+996 554 520 155</span><br>
+            <span class="contact-info">
+                <span class="main-word">
+                    <a href="instagram.com">INSTAGRAM</a>
+                </span> |
+                <span class="main-word">
+                    <a href="instagram.com">VK</a>
+                </span> |
+                <span class="main-word">
+                    <a href="instagram.com">TELEGRAM</a>
+                </span>
+            </span>
+        </span>
+            <span class="outside">
+                <span id="vladislav" onmouseover="vladislav()">
+                    Vladislav
+                </span>
+            </span>
+        <span class="description" id="vladislav-desc">
+            <hr noshade>
+            Has made a system of likes was a Backend developer.
+            Knows
+            <span class="main-word">HTML</span>,
+            <span class="main-word">Python</span>.
+            <hr noshade>
+            Contact Information:<br>
+            <span class="main-word">+???</span><br>
+            <span class="contact-info">
+                <span class="main-word">
+                    <a href="instagram.com">INSTAGRAM</a>
+                </span> |
+                <span class="main-word">
+                    <a href="instagram.com">VK</a>
+                </span> |
+                <span class="main-word">
+                    <a href="instagram.com">TELEGRAM</a>
+                </span>
+            </span>
+        </span>
+        <span class="outside">
+            <span id="aikerim" onmouseover="aikerim()">
+                Aikerim
+            </span>
+        </span>
+        <span class="description" id="aikerim-desc">
+            <hr noshade>
+            Has made a system 'assign to mentor' was a Backend developer.
+            Knows
+            <span class="main-word">HTML</span>,
+            <span class="main-word">Python</span>.
+            <hr noshade>
+            Contact Information:<br>
+            <span class="main-word">+996 700 530 232</span><br>
+            <span class="contact-info">
+                <span class="main-word">
+                    <a href="instagram.com">INSTAGRAM</a>
+                </span> |
+                <span class="main-word">
+                    <a href="instagram.com">VK</a>
+                </span> |
+                <span class="main-word">
+                    <a href="http://instagram.com/">TELEGRAM</a>
+                </span>
+            </span>
+        </span>
+    </article>
+    <script src="{% static 'js/contact-list.js' %}"></script>
+</body>
+</html>

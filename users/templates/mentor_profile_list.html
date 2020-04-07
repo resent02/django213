@@ -1,0 +1,20 @@
+
+
+
+<h1>Страница Ментора</h1>
+<p><a href="{% url 'courses_list' %}">Смотреть все курсы</a></p>
+<p>{{ user }}</p>
+<a href="{% url 'logout' %}">Выйти из аккаунта</a>
+<a href="{% url 'course_add' %}">Добавить курс</a>
+
+
+{% for course in courses %}
+
+    <p><a href="{% url 'course_detail' course.id %}">{{course.title }}</a></p>
+
+
+
+{% endfor %}
+
+x
+

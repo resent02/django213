@@ -1,0 +1,328 @@
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    overflow:  hidden;
+    user-select: none;
+}
+span{
+    /*Анимация подчеркивания*/
+    background-image: linear-gradient(to right, #B22222, #8B0000);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+}
+.list-countries{
+    background-image: linear-gradient(to right, #B22222, #8B0000);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.2s;
+}
+a{
+    text-decoration: none;
+}
+
+#circle {
+    width: 100%;
+    height: 150%;
+    background: #FFF;
+    border-radius: 150%;
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    z-index: 0.5;
+}
+#diamond {
+    width: 700px;
+    height: 500px;
+    background-image: linear-gradient(to right, #B22222 30%, #8B0000);
+    position: absolute;
+    right:0;
+    bottom:0;
+    z-index:0;
+}
+
+ul{
+    list-style: square;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/*Верхняя панель быстрого доступа*/
+
+header{
+    position: relative;
+    z-index:1;
+    box-sizing: border-box;
+    margin-top: 45px;
+}
+.logotype{
+    height: 100px;
+}
+.tittle{
+    position: absolute;
+    font-size: 40px;
+    left: 3.6%;
+    color: #000;
+}
+.main-nav{
+    text-align: right;
+}
+.main-nav a{
+    /*Форматирование текста ссылок*/
+    color: #000;
+    font-size: 35px;
+    padding: 0px 50px;
+
+}.navbar span:not(.tittle):hover{ background-size: 100% 5px }/*При навидении подчеркивать*/
+#main-link:not(:hover){
+    /*Подчеркивание названия главной страницы*/
+    background-size: 100% 5px
+}#main-link:hover{ background-size: 0% 2px }
+
+/*Страница HOME*/
+#home-div{
+    color: #000;
+    padding: 0px 50px;
+    margin-top: 5%
+}#home-div p{
+    font-size: 35px;
+    cursor: default;
+}.important{
+    color: #B22222;
+    border-bottom: 2px solid #B22222
+}
+#home-div ul{
+    padding: 15px 40px;
+    list-style: disc
+}
+#home-div li{
+    padding: 15px 3px
+}.home-text-li{
+    font-size: 30px;
+    cursor: default
+}.home-text-li:hover{ background-size: 100% 2px }
+#home-section{
+    position: relative;
+    z-index:1;
+}
+#about-section{
+    position: relative;
+    z-index:1;
+    cursor: default;
+    margin: auto;
+    font-size: 20px;
+    padding: 40px 26px;
+}
+.about-string{
+    padding: 5px 5px;
+    align: justify;
+    text-indent: 1em;
+}
+.main-word{
+    color: #B22222
+}
+#about-list{
+    padding: 15px 40px;
+    margin-left: 30px;
+    list-style: disc
+}#about-list span:hover{
+    background-size: 100% 2px;
+}
+#about-list li{
+    color: #B22222;
+}#about-list li span{
+    color: #000;
+}
+.list-countries{
+    opacity: 0%;
+    position: relative;
+    bottom: 223px;
+    left: 190px;
+}
+#switzerland-text{
+    left: 190px;
+}
+#sweden-text{
+    left: 160px;
+}
+#england-text{
+    left: 160px;
+}
+#russia-text{
+    left: 145px;
+}
+#america-text{
+    left: 158px;
+}
+#spain-text{
+    left: 140px;
+}
+#italy-text{
+    left: 130px;
+}
+#germany-text{
+    left: 165px;
+}
+.sing-in-form{
+    margin-top: 135px;
+    position: relative;
+    z-index:1;
+}.sing-in-form input{
+    cursor:default;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 10px;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+}.sing-in-form button{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 7px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}.sing-in-form p{
+    color: #B22222;
+    font-size: 35px;
+    cursor: default;
+}.sing-in-form input:hover{
+    box-shadow: 0px 4px 3px -3px #B22222;
+    transition: 0.2s
+}.sing-in-form input:focus{
+    box-shadow: 0px 8px 6px -5px #B22222;
+    transition: 0.4s
+}.sing-in-form button:hover{
+    transform: scale(1.2)
+}.sing-in-form button{
+    background-image: #D3D3D3;
+    transform: scale(1);
+    transition: .4s;
+}.sing-in-form input{
+    box-shadow: 0px 0px 0px 0px #fff;
+    transition: .4s
+}.sing-in-form span{
+    color: #B22222;
+    position: absolute;
+    font-size: 14px;
+    bottom: 9px;
+    right: 535px;
+}.sing-in-form span:hover{ background-size: 100% 1px }
+#registration{
+    margin-top: 90px;
+}#window{
+    opacity: 0%;
+    background: #fff;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 5;
+    position: absolute;
+    left: -500px;
+    bottom: 10%;
+}#window input{
+   margin-left: 135px;
+}#button{
+    background:#DCDCDC;
+    padding: 7px 30px;
+    position: absolute;
+    left: 200px;
+    margin-top: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}#button:hover{
+    transform: scale(1.2)
+}#button a{
+    color: #000;
+}#button{
+    transition: 0.4s;
+}#window p{
+    text-align: center;
+}
+}#window button{
+    margin-left: 200px;
+}#reg{
+    cursor: pointer;
+}#out_reg{
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    position: absolute;
+    top: 131px;
+    left: 320px;
+}#input{
+    border-radius: 50px;
+    width: 180px;
+    height: 38px;
+    margin-top: 15px;
+    margin-left: 162px;
+    background: #fff;
+}#input span{
+    position: absolute;
+    top: 67px;
+    left: 185px;
+    font-size: 18px;
+    cursor: pointer;
+}#student{
+    color: #B22222;
+    margin-left: 75px;
+}#mentor{
+    color: #fff
+}#on-off{
+    background: #B22222;
+    border-radius: 50px;
+    width: 80px;
+    height: 26px;
+    position: absolute;
+    top: 65px;
+    left: 170px;
+}article{
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    margin-top: 100px;
+    color: #000;
+    height: 260px;
+}.outside{
+    font-size: 20px;
+    padding: 50px 50px;
+}.description{
+    font-size: 20px;
+    padding: 50px 50px;
+}article span:not(.description):not(.contact-info):not(.outside):hover{ background-size: 100% 2px; }
+.description{
+    opacity: 0;
+    margin-top: 12px;
+    cursor: default;
+    position: absolute;
+    right: 385px;
+    max-width: 500px;
+    top: 300px;
+}hr{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 147px;
+    width: 200px;
+    background-color: #B22222;
+    height: 3px;
+    border-color: #B22222;
+}article a{
+    color: #B22222;
+}#bogdan{
+    cursor: pointer;
+}#sergey{
+    cursor: pointer;
+}#vladislav{
+    cursor: pointer;
+}#aikerim{
+    cursor: pointer;
+}

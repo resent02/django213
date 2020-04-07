@@ -1,0 +1,86 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body id="bodyц">
+    <div id="diamond"></div>
+    <div id="circle"></div>
+    <header>
+            <div class="navbar">
+                <nav class="main-nav">
+                    <a href="{% url 'home' %}" class="tittle"><span class="tittle">MenTOP.com</span></a>
+                    <a href="{% url 'home' %}"><span>Home</span></a>
+                    <a href="{% url 'about' %}"><span id="main-link">About</span></a>
+                    <a href="{% url 'login' %}"><span>Sing in</span></a>
+                    <a href="{% url 'contact' %}"><span>Contact</span></a>
+                </nav>
+            </div>
+    </header>
+    <section id="about-section">
+        <p class="about-string"><span class="main-word">
+            We are a beginner project helping students and teachers</span>, giving the opportunity to learn and make money.
+            First of all, we try to help organize a pleasant environment for training, provide services, and only then we think about earnings, MelTOP.com, this is not a commercial product.</p>
+            <p class="about-string"><span class="main-word">Our company MelTOP.com</span>, although it has just begun its expansion, is already showing outstanding results in various fields.
+            Students of our site perform at international competitions in Algebra, Chemistry, English and Robotics.
+            On our site you can find both ordinary school subjects and special individual ones, for example: programming languages, rocket science, chess, etc.
+             <p class="about-string"><span class="main-word">On our site you can find something to your liking</span>, and quietly without overpaying commissions to work with teachers.
+            We have a special system for recording lessons - After the end of the lesson, you can watch it even after a year.</p>
+            <p class="about-string"><span class="main-word">Our teachers live in different foreign countries such as</span> - </p>
+                <ul id="about-list">
+                    <li><span id="switzerland">Switzerland</span> - </li>
+                    <li><span id="sweden">Sweden</span> - </li>
+                    <li><span id="england">England</span> - </li>
+                    <li><span id="russia">Russia</span> - </li>
+                    <li><span id="america">America</span> - </li>
+                    <li><span id="spain">Spain</span> - </li>
+                    <li><span id="italy">Italy</span> - </li>
+                    <li><span id="germany">Germany</span> - </li>
+                </ul>
+                    <span id ="switzerland-text" class="list-countries">
+                        <span class="main-word">ALGEBRA</span> - 2,
+                        <span class="main-word">GEOMETRY</span> - 2,
+                        <span class="main-word">PROGRAMMING LANGUAGE</span> - 1.
+                    </span><br>
+                    <span id="sweden-text" class="list-countries">
+                        <span class="main-word">CHEMISTRY</span> - 4,
+                        <span class="main-word">PROGRAMMING LANGUAGES</span> - 8.
+                    </span><br>
+                    <span id="england-text" class="list-countries">
+                        <span class="main-word">ENGLISH</span> - 6,
+                        <span class="main-word">MATHS</span> - 4,
+                        <span class="main-word">Engineering</span> - 2.
+                    </span><br>
+                    <span id="russia-text" class="list-countries">
+                        <span class="main-word">RUSSIAN</span> - 4,
+                        <span class="main-word">ALGEBRA</span> - 6,
+                        <span class="main-word">LITERATURE</span> - 6.
+                    </span><br>
+                    <span id="america-text" class="list-countries">
+                        <span class="main-word">DESIGN</span> - 5,
+                        <span class="main-word">ART</span> - 3,
+                        <span class="main-word">PROGRAMMING LANGUAGE</span> - 4.
+                    </span><br>
+                    <span id="spain-text" class="list-countries">
+                        <span class="main-word">HISTORY</span> - 8,
+                        <span class="main-word">SPANISH</span> - 9,
+                        <span class="main-word">GEOGRAPHY</span> - 5.
+                    </span><br>
+                    <span id="italy-text" class="list-countries">
+                        <span class="main-word">ECONOMY</span> - 5,
+                        <span class="main-word">BUSINESS CLASS</span> - 7,
+                        <span class="main-word">ITALIAN</span> - 3.
+                    </span><br>
+                    <span id="germany-text" class="list-countries">
+                        <span class="main-word">DEUTSCH</span> - 4,
+                        <span class="main-word">GEOMETRY</span> - 2,
+                        <span class="main-word">BIOLOGY</span> - 8.
+                    </span>
+    </section>
+<script src="{% static 'js/country-list.js' %}"></script>
+</body>
+</html>

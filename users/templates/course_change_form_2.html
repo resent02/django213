@@ -1,0 +1,12 @@
+
+<h1>{{ course.title }}</h1>
+
+<form method="post" action="{% url 'course_change' course.id %}">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-success">Save changes</button>
+        <button><a href="{% url 'mentor_profile_list' %}">Вернуться к списку </a></button>
+      </form>
+
+
+

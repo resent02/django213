@@ -1,0 +1,21 @@
+
+<form action="{% url 'courses_list' %}">
+            <input type="search" placeholder="Search" aria-label="Search" name="search">
+            <button type="submit">Search</button>
+          </form>
+<h1>Список всех курсов</h1>
+
+
+
+
+{% if user.is_mentor %}
+    <p><a href="{% url 'mentor_profile' %}">Личный кабинет</a></p>
+    {% else %}
+    <p><a href="{% url 'student_profile' %}">Личный кабинет</a></p>
+{% endif %}
+
+
+{% for course in courses %}
+   <p>Автор: {{ course.author }}</p>
+   <p><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></p>
+{% endfor %}

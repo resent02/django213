@@ -1,0 +1,43 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style-account.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="teacher">
+        <nav>
+            <a href="{% url 'home' %}"><span id="mentop-com">MenTOP.com</span></a>
+            <div id="nav-text-div">
+                <a href="{% url 'mentor_profile' %}"><span>Account</span></a>
+                <a href="{% url 'my_subscribers' %}"><span>My subscribers</span></a>
+                <a href="{% url 'logout' %}"><span>Leave</span></a>
+                <a href=""><span>Money: 5$</span></a>
+            </div>
+        </nav>
+    </header>
+    <section id="main-info-section">
+        <div id="main-info">
+            <a href=""><img src="{% static 'img/avatars/bogdan.png' %}"></a>
+            <div id="back-nick"><p>{{ mentors }}</p></div>
+        </div>
+    </section>
+    <section id="early-subs">
+        {% for course in mentors.courses.all %}
+            <div>
+                <a href="{% url 'course_detail' course.id %}">
+                    <h1>{{ course.title }}</h1>
+                    <p>Name: {{ course.author }}</p>
+                    <p>Speak language: {{ course.body }}</p>
+                    <p>Likes: {{ course.likes.count }}</p>
+                    <p>Phone: {{ course.phone_number }}</p>
+                    <center><p>Price: {{ course.price }}</p></center>
+                </a>
+            </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

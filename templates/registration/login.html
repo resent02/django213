@@ -1,0 +1,45 @@
+<!doctype html>
+{% load widget_tweaks %}
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="diamond"></div>
+    <div id="circle"></div>
+    <header>
+            <div class="navbar">
+                <nav class="main-nav">
+                    <a href="{% url 'home' %}" class="tittle"><span class="tittle">MenTOP.com</span></a>
+                    <a href="{% url 'home' %}"><span>Home</span></a>
+                    <a href="{% url 'about' %}"><span>About</span></a>
+                    <a href="{% url 'login' %}"><span id="main-link">Sing in</span></a>
+                    <a href="{% url 'contact' %}"><span>Contact</span></a>
+                </nav>
+            </div>
+    </header>
+    <center><form method="post" action="{% url 'login' %}" class="sing-in-form">
+        {% csrf_token %}
+        <p>Sing in</p>
+        {% render_field form.username placeholder="Login" %}<br>
+        {% render_field form.password placeholder="Password" type="password" %}<br>
+        <button type="submit">Enter</button>
+        <span id="reg" onclick="reg()">New user ?</span>
+    </form></center>
+    <div id="window">
+        <form action="" class="sing-in-form" id="registration">
+        <p>Registration</p>
+        <div id="input">
+            <div id="on-off"></div><span id="mentor" onclick="to_mentor()">Mentor</span><span id="student" onclick="to_student()">Student</span>
+        </div>
+            <div onclick="auth()" id="button">Create</div>
+        <span id="out_reg" onclick="out_reg()">Back</span>
+    </form>
+    </div>
+    <script src="{% static 'js/okno.js' %}"></script>
+</body>
+</html>

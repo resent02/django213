@@ -1,0 +1,4 @@
+{% for course in courses %}
+   <p>Автор: {{ course.author }}</p>
+   <p><a href="{% url 'course_detail' course.id %}">{{ course.title }}</a></p>
+{% endfor %}

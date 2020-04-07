@@ -1,0 +1,59 @@
+<!doctype html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="{% static 'css/style-account.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body id="body-detail">
+    <header id="teacher">
+        <nav>
+            <a href="{% url 'home' %}"><span id="mentop-com">MenTOP.com</span></a>
+            <div id="nav-text-div">
+                <a href="{% url 'mentor_profile' %}"><span>Account</span></a>
+                <a href="{% url 'my_subscribers' %}"><span>My subscribers</span></a>
+                <a href="{% url 'logout' %}"><span>Leave</span></a>
+                <a href=""><span>Money: 5$</span></a>
+            </div>
+        </nav>
+    </header>
+     <section id="section-detail">
+            <div id="detail-course">
+                    <h1>{{ course.title }}</h1>
+                    <p>Name: {{ course.author }}</p>
+                    <p>Speak language: {{ course.body }}</p>
+                    <p>likes: {{ course.likes.count }}</p>
+                    <p>Phone: {{ course.phone_number }}</p>
+                    <form method="post" action="{{ course.get_like_url }}">
+                        {% csrf_token %}
+                       <button id="like_but"><img src="{% static 'img/like.png' %}" id="like"></button>
+                    </form>
+            </div>
+    </section>
+    <center>
+    <div id="description-course">
+                <span><center>Description: </center></span>
+                <span id="text-description">{{ course.body }}</span>
+            </div>
+        </center>
+    <section id="comments">
+        <div id="comment">
+            <p>Comments: </p>
+            {% for comment in course.comments.all %}
+            <center><hr class="comment-hr" noshade="none"></center>
+                <p id="by"> Comment by: {{ comment.author }}</p>
+            <br>
+                <p>- {{ comment.body }}</p>
+            {% endfor %}
+            <center><hr class="comment-hr" noshade="none"></center>
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <span id="comment-field">{{ form.body }}</span>
+            <button type="submit" id="make-comment">Make comment</button>
+        </form>
+    </section>
+</body>
+</html>
